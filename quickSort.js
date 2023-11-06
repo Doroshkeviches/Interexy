@@ -2,17 +2,18 @@ const QuickSort = (array) => {
     if (array.length <= 1) {
         return array
     }
-    let less = []
-    let bigger = []
-    let middle = Math.floor(array.length / 2)
-    let pivot = array[middle]
+    const less = []
+    const bigger = []
+    const middle = Math.floor(array.length / 2)
+    const pivot = array[middle]
     for (let i = 0; i < array.length; i++) {
         if (array[i] === pivot) {
             continue
         }
         if (array[i] > pivot) {
             bigger.push(array[i])
-        } else {
+        }
+        if(array[i] < pivot) {
             less.push(array[i])
         }
     }
